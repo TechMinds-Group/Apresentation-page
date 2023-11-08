@@ -1,0 +1,54 @@
+.scale-up-center {
+  border-radius: 100% !important;
+  -webkit-animation: scale-up-center 1s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    both;
+  animation: scale-up-center 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) both;
+}
+
+.invisible {
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.visible {
+  transition: all 1s ease-in-out;
+  z-index: 30 !important;
+  opacity: 1 !important;
+}
+
+.scale-up-center > div,
+.minimize-up-center > div,
+.minimize-up-center > button {
+  visibility: hidden;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(100);
+    transform: scale(100);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(100);
+    transform: scale(100);
+  }
+}
+
+/* Defina a cor de fundo da barra de rolagem */
+::-webkit-scrollbar-track:horizontal {
+  background: transparent;
+}
+
+/* Defina a cor da alça da barra de rolagem (thumb) */
+::-webkit-scrollbar-thumb:horizontal {
+  background: transparent;
+}
